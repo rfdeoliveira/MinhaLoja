@@ -1,7 +1,10 @@
 <?php
-include("cabecalho.php");
 include("conecta.php");
 include("banco-categoria.php");
+include("logica-usuario.php");
+include("cabecalho.php");
+
+verificaUsuario();
 
 $categorias = listaCategorias($conexao);
 ?>
@@ -30,7 +33,7 @@ $categorias = listaCategorias($conexao);
         <td>Categoria</td>
         <td>
           <select class="form-control" name="categoria_id">
-            <?php foreach($categorias as $categoria) : ?>
+            <?php foreach ($categorias as $categoria) : ?>
               <option value="<?=$categoria['id']?>">
                 <?=$categoria['nome']?>
               </option>

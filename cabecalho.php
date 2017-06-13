@@ -16,6 +16,9 @@
           <li><a href="produto-formulario.php">Adiciona Produto</a></li>
           <li><a href="produto-lista.php">Produtos</a></li>
           <li><a href="sobre.php">Sobre</a></li>
+        <?php if (usuarioEstaLogado()) : ?>
+          <li class="right"><a href="logout.php">Sair</a></li>
+        <?php endif ?>
         </ul>
       </div>
     </div>

@@ -1,4 +1,5 @@
 <?php
+include('logica-usuario.php');
 include("cabecalho.php");
 include("conecta.php");
 include("banco-categoria.php");
@@ -28,14 +29,14 @@ $usado = $produto['usado'] ? 'checked="checked"' : '';
       <tr>
         <td></td>
         <td>
-          <input type="checkbox" name="usado" value="true" <?=$usado?>> Usado
+          <input type="checkbox" name="usado" value="true" <?= ($usado) ? 'checked' : '' ?>> Usado
         </td>
       </tr>
       <tr>
         <td>Categoria</td>
         <td>
           <select class="form-control" name="categoria_id">
-            <?php foreach($categorias as $categoria) : 
+            <?php foreach ($categorias as $categoria) :
                     $selecao = $produto['categoria_id'] == $categoria['id']
                         ? 'selected="selected"'
                         : '';
