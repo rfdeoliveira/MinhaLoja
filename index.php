@@ -4,7 +4,7 @@
   <h1>Minha loja</h1>
     <?php if (usuarioEstaLogado()) : ?>
       <p class="text-success">
-        Você está logado como <?= usuarioLogado() ?>
+        Você está logado como <?= usuarioLogado() ?> <a href="logout.php">Deslogar</a>
       </p>
     <?php else : ?>
       <h2>Login</h2>
