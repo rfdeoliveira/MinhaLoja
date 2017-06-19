@@ -1,6 +1,9 @@
-<?php include('logica-usuario.php') ?>
-<?php include("cabecalho.php") ?>
+<?php
 
+require_once('cabecalho.php');
+require_once('logica-usuario.php');
+
+?>
   <h1>Minha loja</h1>
     <?php if (usuarioEstaLogado()) : ?>
       <p class="text-success">
@@ -32,4 +35,4 @@
         </table>
       </form>
     <?php endif ?>
-<?php include("rodape.php"); ?>
+<?php require_once('rodape.php') ?>

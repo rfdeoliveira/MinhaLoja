@@ -1,8 +1,8 @@
 <?php
-include('logica-usuario.php');
-include("cabecalho.php");
-include("conecta.php");
-include("banco-produto.php");
+
+require_once('cabecalho.php');
+require_once('banco-produto.php');
+require_once('logica-usuario.php');
 
 $id = $_POST["id"];
 $nome = $_POST["nome"];
@@ -27,4 +27,4 @@ if (alteraProduto($conexao, $id, $nome, $preco, $descricao, $categoria_id, $usad
 <?php
 }
 ?>
-<?php include("rodape.php"); ?>
+<?php require_once('rodape.php') ?>

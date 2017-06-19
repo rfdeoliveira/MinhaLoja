@@ -1,15 +1,14 @@
 <?php
-include('logica-usuario.php');
-include("cabecalho.php");
-include("conecta.php");
-include("banco-produto.php");
+
+require_once('cabecalho.php');
+require_once('conecta.php');
+require_once('banco-produto.php');
+require_once('logica-usuario.php');
+
 ?>
 
-<table class="table table-striped table-bordered">
-    <?php
-    $produtos = listaProdutos($conexao);
-    foreach ($produtos as $produto) :
-    ?>
+  <table class="table table-striped table-bordered">
+    <?php foreach (listaProdutos($conexao) as $produto) : ?>
       <tr>
         <td><?=$produto['nome']?></td>
         <td><?=$produto['preco']?></td>
@@ -27,9 +26,7 @@ include("banco-produto.php");
           </form>
         </td>
       </tr>
-    <?php
-    endforeach
-    ?>
-</table>
+    <?php endforeach ?>
+  </table>
 
-<?php include("rodape.php"); ?>
+<?php require_once('rodape.php') ?>
