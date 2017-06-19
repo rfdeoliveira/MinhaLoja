@@ -1,3 +1,5 @@
+<?php error_reporting(E_ALL ^ E_NOTICE) ?>
+<?php include("mostra-alerta.php") ?>
 <html>
 <head>
   <meta charset="utf-8">
@@ -9,19 +11,18 @@
   <div class="navbar navbar-inverse navbar-fixed-top">
     <div class="container">
       <div class="navbar-header">
-        <a class="navbar-brand" href="index.php">Loja do Ronaldo</a>
+        <a class="navbar-brand" href="index.php">Minha loja</a>
       </div>
       <div>
         <ul class="nav navbar-nav">
           <li><a href="produto-formulario.php">Adiciona Produto</a></li>
           <li><a href="produto-lista.php">Produtos</a></li>
           <li><a href="sobre.php">Sobre</a></li>
-        <?php if (usuarioEstaLogado()) : ?>
-          <li class="right"><a href="logout.php">Sair</a></li>
-        <?php endif ?>
         </ul>
       </div>
     </div>
   </div>
   <div class="container">
     <div class="principal">
+    <?php mostraAlerta('success') ?>
+    <?php mostraAlerta('danger') ?>

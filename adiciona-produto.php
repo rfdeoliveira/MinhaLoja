@@ -1,5 +1,4 @@
 <?php
-include('logica-usuario.php');
 include("cabecalho.php");
 include("conecta.php");
 include("banco-produto.php");
