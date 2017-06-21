@@ -3,19 +3,18 @@
 require_once('banco-categoria.php');
 require_once('logica-usuario.php');
 require_once('cabecalho.php');
+require_once('class/Produto.php');
 
 verificaUsuario();
 
 $categorias = listaCategorias($conexao);
 
-$produto = [
-    'nome' => '',
-    'descricao' => '',
-    'preco' => '',
-    'categoria_id' => 1
-];
-
-$usado = false;
+$produto = new Produto();
+$produto->nome = '';
+$produto->descricao = '';
+$produto->preco = '';
+$produto->categoria_id = 1;
+$produto->usado = false;
 ?>
   <h1>Formulário de produto</h1>
   <form action="adiciona-produto.php" method="post">
