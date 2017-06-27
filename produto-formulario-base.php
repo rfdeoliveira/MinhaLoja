@@ -22,11 +22,11 @@
     <select class="form-control" name="categoria_id">
     <?php foreach ($categorias as $categoria) : ?>
         <?php $selecao = '' ?>
-        <?php if ($produto->categoria_id == $categoria['id']) : ?>
+        <?php if ($produto->categoria->id == $categoria->id) : ?>
             <?php $selecao = 'selected="selected"' ?>
         <?php endif ?>
-      <option value="<?= $categoria['id'] ?>" <?= $selecao ?>>
-        <?= $categoria['nome'] ?>
+      <option value="<?= $categoria->id ?>" <?= $selecao ?>>
+        <?= $categoria->nome ?>
       </option>
     <?php endforeach ?>
     </select>

@@ -9,11 +9,14 @@ verificaUsuario();
 
 $categorias = listaCategorias($conexao);
 
+$categoria = new Categoria();
+$categoria->id = 1;
+
 $produto = new Produto();
 $produto->nome = '';
 $produto->descricao = '';
 $produto->preco = '';
-$produto->categoria_id = 1;
+$produto->categoria = $categoria;
 $produto->usado = false;
 ?>
   <h1>Formulário de produto</h1>
