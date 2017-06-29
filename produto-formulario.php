@@ -10,14 +10,14 @@ verificaUsuario();
 $categorias = listaCategorias($conexao);
 
 $categoria = new Categoria();
-$categoria->id = 1;
+$categoria->setId(1);
 
 $produto = new Produto();
-$produto->nome = '';
-$produto->descricao = '';
-$produto->preco = '';
-$produto->categoria = $categoria;
-$produto->usado = false;
+$produto->setNome('');
+$produto->setDescricao('');
+$produto->setPreco('');
+$produto->setCategoria($categoria);
+$produto->setUsado(false);
 ?>
   <h1>Formulário de produto</h1>
   <form action="adiciona-produto.php" method="post">
