@@ -12,12 +12,8 @@ $categorias = listaCategorias($conexao);
 $categoria = new Categoria();
 $categoria->setId(1);
 
-$produto = new Produto();
-$produto->setNome('');
-$produto->setDescricao('');
-$produto->setPreco('');
-$produto->setCategoria($categoria);
-$produto->setUsado(false);
+$produto = new Produto('', '', '', $categoria, false);
+
 ?>
   <h1>Formulário de produto</h1>
   <form action="adiciona-produto.php" method="post">
