@@ -8,4 +8,9 @@ class Produto
     public $descricao;
     public $categoria;
     public $usado;
+
+    public function precoComDesconto($valor)
+    {
+        return $this->preco - ($this->preco * $valor);
+    }
 }
