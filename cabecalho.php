@@ -1,5 +1,6 @@
 <?php error_reporting(E_ALL ^ E_NOTICE) ?>
 <?php require_once('mostra-alerta.php') ?>
+<?php require_once('autoload.php') ?>
 <html>
 <head>
   <meta charset="utf-8">
